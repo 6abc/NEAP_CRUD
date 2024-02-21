@@ -13,6 +13,35 @@
   </p>
 </p>
 
+### Installation
+1. Clone the repo
+```sh
+git clone https://github.com/6abc/NEAP_CRUD.git
+cd NEAP_CRUD
+```
+2.1 Create a virtual environment `[Unix](optional but recommended):`
+```sh
+python -m venv venv
+source venv/bin/activate
+```
+2.2 Create a virtual environment `[Windows](optional but recommended):`
+```sh
+python -m venv venv
+.\venv\Scripts\activate
+```
+3. Install project dependencies:
+```sh
+pip install -r requirements.txt
+```
+4. Make project migrations:
+```sh
+python manage.py migrate
+```
+5. 🔥Start Application:
+```sh
+python manage.py runserver 0.0.0.0:10000
+```
+
 ## LANDING Page
 ![image](https://github.com/6abc/NEAP_CRUD/assets/97246854/ed6344c3-c518-4641-9e54-b72889c7c7b2)
 
