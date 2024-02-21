@@ -37,7 +37,11 @@ pip install -r requirements.txt
 ```sh
 python manage.py migrate
 ```
-5. 🔥Start Application:
+5. Create user for first login (Super User profile /secret):
+```sh
+python manage.py createsuperuser
+```
+6. 🔥Start Application:
 ```sh
 python manage.py runserver 0.0.0.0:10000
 ```
