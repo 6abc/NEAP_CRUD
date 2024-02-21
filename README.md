@@ -13,6 +13,9 @@
   </p>
 </p>
 
+### Requirement
+python 3.11.2
+
 ### Installation
 1. Clone the repo
 ```sh
