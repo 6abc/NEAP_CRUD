@@ -22,12 +22,12 @@ python 3.11.2
 git clone https://github.com/6abc/NEAP_CRUD.git
 cd NEAP_CRUD
 ```
-2.1 Create a virtual environment `[Unix](optional but recommended):`
+2. Create a virtual environment `[Unix](optional but recommended):`
 ```sh
 python -m venv venv
 source venv/bin/activate
 ```
-2.2 Create a virtual environment `[Windows](optional but recommended):`
+2. Create a virtual environment `[Windows](optional but recommended):`
 ```sh
 python -m venv venv
 .\venv\Scripts\activate
