@@ -76,4 +76,4 @@ dmypy.json
 .pytype/
 cython_debug/
 virtual_env/
-media/images/
+*images/
