@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```sh
 python manage.py migrate
 ```
-5. Create user for first login (Super User profile /secret):
+5. Create user for first login (Super User profile 👉 '/secret'):
 ```sh
 python manage.py createsuperuser
 ```
