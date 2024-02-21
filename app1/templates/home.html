@@ -11,7 +11,7 @@
         <nav>
             <a href="{% url 'HomeView' %}">Home</a>
             {% if user.is_authenticated %}
-            <a href="{% url 'movie-list' %}">Bookmark</a>
+            <a href="{% url 'movie-list' %}">Add Movie</a>
             <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
                 <button type="submit">Logout</button>
