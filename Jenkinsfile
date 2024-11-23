@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('Deploy Services') {
+        stage('Deploy Docker Services') {
             steps {
                 script {
                     // Deploy using docker-compose.yml
@@ -26,5 +26,33 @@ pipeline {
                 }
             }
         }
+
+        stage('Stop Deployed Docker Services') {
+            steps {
+                script {
+                    // Deploy using docker-compose.yml
+                    sh 'docker stop myapp-image'
+                }
+            }
+        }        
+
+        stage('Remove Deployed Docker Services') {
+            steps {
+                script {
+                    // Deploy using docker-compose.yml
+                    sh 'docker rm myapp-image'
+                }
+            }
+        }
+
+        stage('Remove Deployed Docker Image') {
+            steps {
+                script {
+                    // Deploy using docker-compose.yml
+                    sh 'docker rmi myapp-image:v0.1'
+                }
+            }
+        }       
+        
     }
 }
