@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <a href="{% url 'HomeView' %}">Home</a>
+            <a href="{% url 'HomeView' %}">Home New Version</a>
             {% if user.is_authenticated %}
             <a href="{% url 'movie-list' %}">Add Movie</a>
             <form method="post" action="{% url 'logout' %}">
