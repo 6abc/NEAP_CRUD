@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <title>Document</title>
+    <title>Movie List</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="{% url 'HomeView' %}">Home New Version</a>
+            <a href="{% url 'HomeView' %}">Home</a>
             {% if user.is_authenticated %}
             <a href="{% url 'movie-list' %}">Add Movie</a>
             <form method="post" action="{% url 'logout' %}">
@@ -17,27 +17,27 @@
                 <button type="submit">Logout</button>
             </form>
             {% else %}
-            <a href="{% url 'movie-list' %}">Login</a>
+            <a href="{% url 'login' %}">Login</a>
             {% endif %}
         </nav>
     </header>
 
-        {% for data in data_dict %}
-        <article class="notice">
-            <h4>{{data.title}}</h4>
+    <main>
+        {% if data_dict %}
+            {% for data in data_dict %}
+            <article class="notice">
+                <h4>{{ data.title }}</h4>
                 <figure>
-                    <img alt="{{ data.title}}" src="{{ data.poster.url }}" />
-                    <figcaption>{{data.title}}</figcaption>
+                    <img alt="{{ data.title }}" src="{{ data.poster.url }}" />
+                    <figcaption>{{ data.title }}</figcaption>
                 </figure>
-                <p class="text-muted">{{data.year}} | {{data.director}}</p>
-                <p>{{data.plot}}</p>
-        </article>
-        <p>
-            <a class="button" href="{% url 'movie-list' %}">Add Movie</a>
-        </p>
-        {% empty %}
+                <p class="text-muted">{{ data.year }} | {{ data.director }}</p>
+                <p>{{ data.plot }}</p>
+            </article>
+            {% endfor %}
+        {% else %}
         <p><kbd>No Movie found</kbd></p>
-        {% endfor %}
-
+        {% endif %}
+    </main>
 </body>
 </html>
