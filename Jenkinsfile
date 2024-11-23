@@ -28,10 +28,10 @@ pipeline {
         }
     }
 
-    // post {
-    //     always {
-    //         // Optional cleanup after the pipeline finishes
-    //         sh 'docker compose down'
-    //     }
+    post {
+        always {
+            // Optional cleanup after the pipeline finishes
+            sh 'docker compose down'
+        }
     }
 }
