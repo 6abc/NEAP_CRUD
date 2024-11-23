@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Deploy using docker-compose.yml
-                    sh 'docker run -d -p 9000:9000 myapp-image'
+                    sh 'docker run -d -p 9000:9000 myapp-image:v0.1'
                 }
             }
         }
