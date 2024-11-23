@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image using the Dockerfile in the root
-                    sh 'docker build -t myapp-image .'
+                    sh 'docker build --no-cache -t myapp-image:v0.1 .'
                 }
             }
         }
