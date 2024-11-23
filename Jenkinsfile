@@ -9,6 +9,15 @@ pipeline {
             }
         }
 
+        stage('Remove Docker Images') {
+            steps {
+                script {
+                    // Build Docker image using the Dockerfile in the root
+                    sh 'docker stop $(docker ps --filter "ancestor=myapp-image" -q)'
+                }
+            }
+        }        
+        
         stage('Build Docker Images') {
             steps {
                 script {
