@@ -1,5 +1,5 @@
 asgiref==3.7.2
-Django==5.0.2
+Django==5.0.3
 django-filter==23.5
 django-multi-captcha-admin==2.0.0
 django-ranged-response==0.2.0
